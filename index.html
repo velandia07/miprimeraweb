@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>LOCA IDEA PASTELERÍA</title>
+    <meta charset="UTF-8"> <!--descripción de la pagina -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css"> <!--Enlazar archivos css -->
+    <!-- Enlace a Bootstrap desde CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<!--Contiene el contenido visible-->
+
+<body>
+    <header>
+        <!--Encabezado principal-->
+        <h1>LOCA IDEA PASTELERÍA</h1>
+        <!--PArrafo principal-->
+        <p>La mejor pastelería del mundo</p>
+        <!--Define una sección de navegación para enlaces importantes.-->
+        <nav>
+            <!--a crear hipervínculos-->
+            <!--href adicional Especifica la URL de destino del enlace,adicional las secciones posteriores que se encuentranen el doc-->
+            <!--terget Define cómo se abrirá el enlace, _self (misma pestaña),  -->
+            <a href="#seccion1" target="_self" title="Ir a la seccion 1">Seccion 1</a>
+            <a href="#seccion2" target="_self" title="Ir a la seccion 2">Seccion 2</a>
+            <a href="#seccion3" target="_self" title="Ir a la seccion 3">Seccion 3</a>
+            <a href="#seccion4" target="_self" title="Ir a la seccion 4">Seccion 4</a>
+        </nav>
+    </header>
+    <!--Contenido principal del siti, lo indica el main-->
+    <main>
+        <section id="seccion1">
+            <h2>TORTA INFANTIL</h2>
+            <img src="./assets/imagen_mario.webp" alt="Imagen torta de Mario Bros" width="500" height="400">
+        </section>
+        <section id="seccion2">
+            <h2>TORTA ADULTO</h2>
+            <video src="./assets/video_juanitoalimaña.mp4" controls width="300"></video>
+        </section>
+        <section id="seccion3">
+            <h2>SABOR DE TORTAS</h2>
+            <ul>
+                <li>Chocolate</li>
+                <li>Tres leches</li>
+                <li>Maní</li>
+            </ul>            
+        </section>
+        <section id="seccion4">
+            <h2>PRECIOS TORTAS</h2>
+                <!-- Inicio de la tabla -->
+            <table>
+                <!-- Título de la tabla -->
+                <caption>Tabla de Precios de Tortas</caption>
+                <!-- Inicio del encabezado de la tabla -->
+                <thead>
+                    <tr>
+                        <!-- Encabezados de las columnas -->
+                        <th>Torta</th>
+                        <th>Personas</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <!-- Inicio del cuerpo de la tabla -->
+                <tbody>
+                    <!-- Fila para las tortas de chocolate -->
+                    <tr>
+                        <td>Chocolate</td>
+                        <td>10</td>
+                        <td>10,000</td>
+                    </tr>
+                    <tr>
+                        <td>Chocolate</td>
+                        <td>20</td>
+                        <td>20,000</td>
+                    </tr>
+                    <tr>
+                        <td>Chocolate</td>
+                        <td>30</td>
+                        <td>30,000</td>
+                    </tr>
+                    <!-- Fila para las tortas tres leches -->
+                    <tr>
+                        <td>Tres Leches</td>
+                        <td>10</td>
+                        <td>100,000</td>
+                    </tr>
+                    <tr>
+                        <td>Tres Leches</td>
+                        <td>20</td>
+                        <td>200,000</td>
+                    </tr>
+                    <tr>
+                        <td>Tres Leches</td>
+                        <td>30</td>
+                        <td>300,000</td>
+                    </tr>
+                    <!-- Fila para las tortas de maní -->
+                    <tr>
+                        <td>Maní</td>
+                        <td>10</td>
+                        <td>11,000</td>
+                    </tr>
+                    <tr>
+                        <td>Maní</td>
+                        <td>20</td>
+                        <td>21,000</td>
+                    </tr>
+                    <tr>
+                        <td>Maní</td>
+                        <td>30</td>
+                        <td>31,000</td>
+                    </tr>
+                </tbody>
+                <!-- Pie de tabla con nota -->
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Precios sujetos a cambios sin previo aviso.</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <!-- Inicio del formulario de pedido -->
+        <form action="#" method="post">
+            <!-- Campo de texto para el número de contacto -->
+            <label for="contacto">Número de contacto:</label>
+            <input type="text" id="contacto" name="contacto" required>
+        
+            <!-- Campo de texto para el correo electrónico -->
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+        
+            <!-- Campo de texto para la dirección de entrega -->
+            <label for="direccion">Dirección de entrega:</label>
+            <input type="text" id="direccion" name="direccion" required>
+        
+            <!-- Campo de texto para la descripción de la torta -->
+            <label for="descripcion">Descripción de la torta:</label>
+            <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+        
+            <!-- Botón de envío del formulario -->
+            <button type="submit">Enviar</button>
+        </form>
+        </footer>
+</body>
+</html>

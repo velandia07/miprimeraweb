@@ -1,0 +1,231 @@
+/* Estilos globales para todo el sitio */
+body {
+    /* Color de fondo del cuerpo de la página */
+    background-color: #fff8e1; /* Un tono pastel claro que evoca suavidad */
+
+    /* Fuente y tamaño de texto para todo el cuerpo */
+    font-family: 'Poppins', sans-serif; /* Tipografía amigable y elegante */
+    font-size: 16px;
+
+    /* Márgenes y relleno */
+    margin: 0;
+    padding: 0;
+
+    /* Color del texto */
+    color: #333; /* Color de texto neutro */
+}
+
+/* Estilos para el encabezado de la página */
+header {
+    /* Color de fondo del encabezado */
+    background-color: #f7c6c7; /* Un tono rosado pastel que evoca dulzura */
+
+    /* Color del texto dentro del encabezado */
+    color: #fff; /* Texto blanco para contraste */
+
+    /* Relleno dentro del encabezado */
+    padding: 20px;
+
+    /* Sombra para destacar el encabezado */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    /* Fuente cursiva y bonita, además de llamativa*/
+    font: oblique bold 120% cursive;
+
+    /* Tamaño de fuente grande */
+    font-size: 48px;
+
+    /* Color pastel */
+    color: #f78664
+}
+
+/* Estilos para el párrafo principal */
+header p {
+    /* Tamaño de fuente del párrafo */
+    font-size: 18px;
+
+    /* Color del texto del párrafo */
+    color: #ffeb3b; /* Amarillo pastel para un toque dulce */
+}
+
+/* Estilos para los enlaces de navegación */
+nav a {
+    /* Color del texto del enlace */
+    color: #fff; /* Color blanco para enlaces */
+
+    /* Sin subrayado en los enlaces */
+    text-decoration: none;
+
+    /* Fuente más grande y elegante */
+    font-size: 18px;
+
+    /* Relleno y margen */
+    padding: 10px;
+    margin: 5px;
+
+    /* Fondo del enlace */
+    background-color: #f7a8a8; /* Tono rosado claro */
+    
+    /* Esquinas redondeadas */
+    border-radius: 5px;
+
+    /* Efecto de transición en los enlaces */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    /* Cambia el fondo y color del enlace al pasar el ratón */
+    background-color: #ffeb3b; /* Amarillo pastel */
+    color: #333; /* Color de texto oscuro para contraste */
+}
+
+/* Estilos para la sección principal */
+main {
+    /* Relleno en la sección principal */
+    padding: 40px 20px;
+}
+
+section {
+    /* Fondo blanco para las secciones */
+
+    background: linear-gradient(to bottom, #e75c39, #feb47b);
+
+    /* Margen inferior para separar secciones */
+    margin-bottom: 30px;
+
+    /* Sombra para un efecto visual atractivo */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+    /* Relleno en la sección */
+    padding: 20px;
+
+    /* Texto centrado */
+    text-align: center;
+}
+
+/* Estilos para las imágenes */
+section img {
+    /* Bordes redondeados para las imágenes */
+    border-radius: 10px;
+
+    /* Sombra alrededor de las imágenes */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los videos */
+section video {
+    /* Bordes redondeados para los videos */
+    border-radius: 10px;
+
+    /* Sombra alrededor de los videos */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la lista de sabores */
+ul {
+    /* Estilo del texto de la lista */
+    color: #d2691e; /* Tono marrón que evoca el chocolate */
+    font-weight: bold;
+}
+
+/* Estilos para la tabla de precios */
+table {
+    /* Ancho de la tabla */
+    width: 100%;
+
+    /* Borde colapsado para la tabla */
+    border-collapse: collapse;
+
+    /* Margen inferior para separar secciones */
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    /* Borde de la tabla y celdas */
+    border: 1px solid #ddd;
+
+    /* Relleno en las celdas */
+    padding: 10px;
+
+    /* Color del texto en las celdas */
+    color: #333;
+}
+
+th {
+    /* Color de fondo del encabezado de la tabla */
+    background-color: #f7c6c7; /* Un tono rosado pastel */
+}
+
+td {
+    /* Color de fondo de las celdas de la tabla */
+    background-color: #fff;
+}
+
+/* Estilos para el pie de página */
+footer {
+    /* Color de fondo del pie de página */
+    background-color: #f7c6c7; /* Mismo tono rosado pastel */
+
+    /* Color del texto del pie de página */
+    color: #fff; /* Texto blanco */
+
+    /* Relleno dentro del pie de página */
+    padding: 10px;
+
+    /* Centra el texto en el pie de página */
+    text-align: center;
+}
+
+footer form {
+    /* Margen superior para el formulario */
+    margin-top: 20px;
+}
+
+footer label, footer input, footer textarea, footer button {
+    /* Mostrar elementos del formulario en bloque */
+    display: block;
+
+    /* Ancho completo de los elementos del formulario */
+    width: 100%;
+
+    /* Margen inferior para separar elementos */
+    margin-bottom: 10px;
+}
+
+footer input, footer textarea {
+    /* Relleno dentro de los campos de texto */
+    padding: 10px;
+
+    /* Borde delgado para los campos de texto */
+    border: 1px solid #ddd;
+
+    /* Bordes redondeados para los campos de texto */
+    border-radius: 5px;
+}
+
+footer button {
+    /* Color de fondo del botón */
+    background-color: #ffeb3b; /* Amarillo pastel */
+
+    /* Color del texto del botón */
+    color: #333;
+
+    /* Bordes redondeados para el botón */
+    border-radius: 5px;
+
+    /* Relleno dentro del botón */
+    padding: 10px;
+
+    /* Borde delgado para el botón */
+    border: none;
+
+    /* Efecto de transición en el botón */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+footer button:hover {
+    /* Cambia el fondo y color del botón al pasar el ratón */
+    background-color: #333;
+    color: #ffeb3b;
