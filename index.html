@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <!-- Asigne una clase a cada header para poder modificarlo en el css -->
     <header class="header-index">
         <h1>LOCA IDEA PASTELERÍA</h1>
         <nav>
@@ -71,6 +72,10 @@
                 <label for="porciones">Número de porciones:</label>
                 <input type="number" id="porciones" class="form-control w-50 mx-auto my-3" placeholder="Ingresa la cantidad" min="1">
                 <button type="submit" class="btn btn-primary">Calcular Precio</button>
+                <div id="opcionesPedido" style="display: none;" class="mt-4">
+                    <button class="btn btn-success" onclick="redirigirWhatsapp()">Pedir por WhatsApp</button>
+                    <button class="btn btn-info" onclick="redirigirPersonalizada()">Atención personalizada</button>
+                </div>
             </form>
             <div id="resultado" class="mt-4 text-center"></div>
         </section>
