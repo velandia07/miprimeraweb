@@ -25,26 +25,31 @@
         <p>Loca Idea Pastelería está formada por un grupo de apasionados por el arte de la repostería. Nos esforzamos por crear tortas únicas que combinen sabor y diseño.</p>
 
         <h3 class="mt-5">Contáctanos</h3>
-        <form action="#" class="w-50 mx-auto">
-            <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre:</label>
-                <input type="text" class="form-control" id="nombre" required>
-            </div>
-            <div class="mb-3">
-                <label for="correo" class="form-label">Correo Electrónico:</label>
-                <input type="email" class="form-control" id="correo" required>
-            </div>
-            <div class="mb-3">
-                <label for="mensaje" class="form-label">Mensaje:</label>
-                <textarea class="form-control" id="mensaje" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
+        <section id="atencion-personalizada">
+            <p>Si quieres atención personalizada por favor deja tus datos:</p>
+            <form id="formAtencion">
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" required>
+          
+              <label for="telefono">Número de contacto:</label>
+              <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" required>
+          
+              <label for="direccion">Dirección de entrega de la torta:</label>
+              <input type="text" id="direccion" name="direccion" required>
+          
+              <label for="descripcion">Descripción de la solicitud:</label>
+              <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+          
+              <button type="button" onclick="imprimirPedido()">Imprimir pedido</button>
+              <button type="button" onclick="enviarPorWhatsapp()">Enviar por WhatsApp</button>
+            </form>
+          </section>
     </main>
 
     <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2025 Loca Idea Pastelería</p>
     </footer>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
