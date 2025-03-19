@@ -3,19 +3,17 @@
 
 <head>
     <title>LOCA IDEA PASTELERÍA</title>
-    <meta charset="UTF-8"> <!--Descripción de la página-->
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css"> <!--Enlazar archivo CSS-->
+    <link rel="stylesheet" href="./css/main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <!--Encabezado principal-->
         <h1>LOCA IDEA PASTELERÍA</h1>
         <p>La mejor pastelería del mundo</p>
         <nav>
-            <!-- Navegación -->
             <a href="index.html">Inicio</a>
             <a href="galeria.html">Galería</a>
             <a href="detalle.html">Detalle de Imagen</a>
@@ -24,33 +22,42 @@
     </header>
 
     <main>
-        <!-- Galería de cinta -->
-        <section id="galeria-cinta" class="my-5">
-            <h2 class="text-center">Galería de Tortas</h2>
-            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="./assets/imagen_mario.webp" class="d-block w-100" alt="Torta Mario">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./assets/Imagen_Torta_Sonic.webp" class="d-block w-100" alt="Torta Sonic">
-                    </div>
-                    <div class="carousel-item">
-                        <video class="d-block w-100" controls>
-                            <source src="./assets/Torta_Dragon_Ball.mp4" type="video/mp4">
-                        </video>
-                    </div>
+        <!-- Carrusel mejorado con Bootstrap -->
+        <div id="carruselTortas" class="carousel slide w-75 mx-auto my-5" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner rounded shadow-lg">
+                <div class="carousel-item active">
+                    <img src="assets/imagen_mario.webp" class="d-block w-100 img-fluid" alt="Torta Mario">
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                    <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
+                <div class="carousel-item">
+                    <img src="assets/Imagen_Torta_Sonic.webp" class="d-block w-100 img-fluid" alt="Torta Sonic">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/torta_chocolate.jpg" class="d-block w-100 img-fluid" alt="Torta Chocolate">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/torta_gelatina.jpg" class="d-block w-100 img-fluid" alt="Torta Gelatina">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/torta_tres_leches.jpg" class="d-block w-100 img-fluid" alt="Torta Tres Leches">
+                </div>
+                <!-- Si deseas mostrar videos, puede hacerse en otro carrusel separado o se adaptan con etiquetas <video> -->
             </div>
-        </section>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carruselTortas" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-dark rounded-circle p-2"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carruselTortas" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-dark rounded-circle p-2"></span>
+            </button>
+        </div>
+
+        <script>
+            const carrusel = document.querySelector('#carruselTortas');
+            const bootstrapCarrusel = new bootstrap.Carousel(carrusel, {
+                interval: 30,
+                ride: 'carousel',
+                pause: false
+            });
+        </script>
 
         <!-- Calculadora de precios -->
         <section id="precio-tortas" class="my-5">
@@ -77,4 +84,5 @@
     <script src="./js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
