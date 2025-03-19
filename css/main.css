@@ -1,143 +1,218 @@
-/* Estilos globales */
-body {
-    background-color: #fff8e1; /* Fondo suave y cálido */
-    font-family: 'Poppins', sans-serif; /* Tipografía elegante */
-    font-size: 16px;
+/* ========================================================
+   ESTILOS GLOBALES – APLICAN A TODAS LAS PÁGINAS DE MI WEB
+   ======================================================== */
+
+   body {
+    background-color: #fff8e1; /* Fondo suave color crema pastel */
+    font-family: 'Poppins', sans-serif; /* Tipografía profesional y moderna */
+    font-size: 16px; /* Tamaño legible para todo el contenido */
     margin: 0;
     padding: 0;
-    color: #333; /* Texto oscuro para buena legibilidad */
+    color: #333; /* Texto gris oscuro para buena legibilidad */
+    line-height: 1.6; /* Espaciado entre líneas para mayor claridad */
 }
 
-/* Encabezado */
+/* ========================================================
+   ENCABEZADO – TÍTULO PRINCIPAL Y MENÚ DE NAVEGACIÓN
+   ======================================================== */
 header {
-    background-color: #f7c6c7; /* Fondo rosado pastel */
-    color: #fff;
+    background-color: #f37d7f; /* Fondo rosado pastel */
+    color: #fff; /* Letras blancas sobre el fondo */
     text-align: center;
-    padding: 20px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    padding: 30px 0; /* Espaciado vertical */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra profesional */
+}
+
+/* Estilo específico del header de GALERÍA */
+.header-galeria {
+    background-color: #a3c9f9; /* Azul pastel */
+}
+
+/* Estilo específico del header de DETALLE */
+.header-detalle {
+    background-color: #f5cb72; /* Amarillo suave pastel */
+}
+
+/* Estilo específico del header de SOBRE NOSOTROS */
+.header-sobre-nosotros {
+    background-color: #54f55a; /* Verde menta pastel */
 }
 
 header h1 {
-    font-size: 2.5rem; /* Tamaño grande para el título */
-    margin: 0;
+    font-size: 3rem; /* Tamaño grande para el título de la pastelería */
     font-weight: bold;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+header nav {
+    margin-top: 15px;
 }
 
 header nav a {
-    color: #fff; /* Links en blanco */
-    margin: 0 10px;
+    color: #fff;
     text-decoration: none;
-    font-size: 1.1rem; /* Tamaño de fuente adecuado */
-    padding: 5px 15px;
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease-in-out;
+    margin: 0 12px;
+    padding: 8px 20px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.2); /* Botones suaves */
+    transition: all 0.3s ease;
+    font-weight: 500;
 }
 
 header nav a:hover {
-    background-color: #ffc107; /* Amarillo al pasar el mouse */
-    color: #333; /* Contraste */
+    background-color: #ffc107; /* Efecto al pasar el mouse */
+    color: #333;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* Contenido principal */
+/* ========================================================
+   CONTENIDO PRINCIPAL (MAIN) – USADO EN TODAS LAS PÁGINAS
+   ======================================================== */
+
 main {
-    margin-top: 20px;
-    padding: 0 15px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Carrusel */
+/* ========================================================
+   CARRUSEL DE TORTAS – SECCIÓN DE GALERÍA DESTACADA
+   ======================================================== */
+
 .carousel-item img,
 .carousel-item video {
-    height: 500px; /* Altura fija para mantener proporciones */
-    object-fit: cover; /* Ajusta la imagen/vídeo */
+    height: 500px;
+    object-fit: cover; /* Ajusta imagen sin deformar */
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.carousel-indicators button {
-    background-color: #f7c6c7; /* Indicadores rosados */
+.carousel-inner {
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-/* Galería */
-#galeria-cinta img {
-    height: 700px;
-    object-fit: cover; /* Mantener proporción */
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para efecto visual */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #f7c6c7; /* Íconos rosados */
+    border-radius: 50%;
+    padding: 10px;
 }
 
-/* Secciones */
-h2 {
-    color: #f78664; /* Títulos rosados llamativos */
-    margin-bottom: 1rem;
-}
+/* ========================================================
+   SECCIONES GENERALES – COMO CALCULADORA, SOBRE NOSOTROS
+   ======================================================== */
 
 section {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
-/* Formularios */
+h2 {
+    color: #f78664; /* Títulos atractivos */
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* ========================================================
+   FORMULARIOS – CALCULADORA DE PRECIOS Y OTROS
+   ======================================================== */
+
 form label {
-    font-weight: bold;
+    font-weight: 600;
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
 }
 
 form input,
 form select,
 form textarea {
+    width: 100%;
+    padding: 12px;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    width: 100%; /* Ocupar todo el ancho */
-    margin-bottom: 1rem;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    background-color: #fffef9;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #f7c6c7;
+    outline: none;
+    box-shadow: 0 0 8px rgba(247, 198, 199, 0.6);
 }
 
 form button {
-    background-color: #4CAF50; /* Verde llamativo */
-    color: #fff;
+    background-color: #4CAF50; /* Verde pastel elegante */
+    color: white;
     border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    border-radius: 8px;
+    padding: 12px 25px;
     font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 form button:hover {
-    background-color: #3e8e41; /* Verde más oscuro */
+    background-color: #3e8e41;
+    transform: scale(1.05);
 }
 
-/* Tabla */
+/* ========================================================
+   TABLAS – POR SI USO EN DETALLE.HTML
+   ======================================================== */
+
 .table {
-    border: 1px solid #ddd;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
     background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
 }
 
 .table th {
-    background-color: #f7c6c7; /* Encabezado rosado */
+    background-color: #f7c6c7;
     color: #333;
+    font-weight: bold;
 }
 
-.table td {
-    color: #333;
-    text-align: center;
-}
+/* ========================================================
+   PIE DE PÁGINA – PRESENTE EN TODAS LAS PÁGINAS
+   ======================================================== */
 
-/* Pie de página */
 footer {
-    background-color: #333; /* Fondo oscuro */
+    background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 25px 10px;
+    font-size: 0.95rem;
 }
 
 footer p {
     margin: 0;
 }
 
-/* Enlaces en el pie de página */
 footer a {
-    color: #ffc107; /* Amarillo para destacar */
+    color: #ffc107; /* Amarillo pastel */
     text-decoration: none;
+    margin-left: 5px;
 }
 
 footer a:hover {
