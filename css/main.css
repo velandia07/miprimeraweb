@@ -86,7 +86,8 @@ main {
 
 .carousel-item img,
 .carousel-item video {
-    height: 500px;
+    width: 400;
+    height: 630px;
     object-fit: cover; /* Ajusta imagen sin deformar */
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
