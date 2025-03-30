@@ -1,3 +1,5 @@
+//Esto hará que mi script no se ejecute antes del DOM
+document.addEventListener("DOMContentLoaded", function() {
 // Obtenemos los elementos del formulario HTML
 const formCalculo = document.getElementById('form-calculo'); // Formulario principal
 const saborInput = document.getElementById('sabor');          // Selector de sabor de torta
@@ -123,3 +125,4 @@ function validarFormulario() {
       window.open(url, '_blank');
     }
   }
+});
