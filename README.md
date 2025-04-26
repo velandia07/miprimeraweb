@@ -1,15 +1,39 @@
-# 🧁 Proyecto Web: Loca Idea Pastelería
 
-Este proyecto consiste en una página web de una pastelería, con un **frontend** visual hecho en HTML/CSS/JS y un **backend** en Node.js con Express conectado a **MongoDB**.
+# 🎂 Proyecto Web: Loca Idea Pastelería
 
-Incluye:
-- Visualización dinámica de tortas desde una base de datos.
-- Formulario para registrar nuevas tortas.
-- API REST con operaciones GET y POST.
+Este proyecto consiste en una página web para una pastelería llamada **Loca Idea**, construida con una arquitectura full stack:
+
+- **Frontend:** Angular CLI (HTML, CSS, TypeScript, Bootstrap)
+- **Backend:** Node.js + Express
+- **Base de datos:** MongoDB
 
 ---
 
-## 🚀 ¿Cómo ejecutar el proyecto en local?
+## ✨ Funcionalidades principales
+
+✅ Visualización dinámica de tortas desde MongoDB  
+✅ Registro de nuevas tortas desde un formulario  
+✅ API RESTful con endpoints GET y POST  
+✅ Estilo profesional y diseño responsive con Bootstrap  
+✅ Sistema de registro y login de usuarios con Angular  
+✅ Autenticación protegida para acceder a la vista `crear-torta`  
+✅ Almacenamiento de usuarios registrados en la base de datos  
+✅ Visualización de tortas en galería  
+✅ Eliminación de tortas desde la interfaz  
+✅ Cálculo interactivo de precios por porciones con descuentos
+
+---
+
+## 🔐 Acceso al sistema
+
+Para acceder a la vista protegida donde puedes **crear nuevas tortas**, primero debes registrarte o iniciar sesión:
+
+- 📝 Registro: [http://localhost:4300/register](http://localhost:4300/register)  
+- 🔑 Login: [http://localhost:4300/login](http://localhost:4300/login)
+
+---
+
+## 🚀 ¿Cómo ejecutar el proyecto localmente?
 
 ### 1️⃣ Clona el repositorio
 
@@ -27,87 +51,96 @@ npm install
 
 ### 3️⃣ Configura la conexión a MongoDB
 
-Dentro de la carpeta `backend/`, crea un archivo llamado `.env` y añade:
+Crea un archivo `.env` dentro de la carpeta `backend/` con esta línea:
 
-```env
+```
 MONGO_URI=mongodb://127.0.0.1:27017/pasteleríaDB
 ```
 
-Asegúrate de tener MongoDB instalado y en ejecución localmente.
+Asegúrate de tener **MongoDB instalado y corriendo localmente**.
 
 ### 4️⃣ Levanta el servidor backend
-
-Desde la carpeta `backend/`:
 
 ```bash
 node app.js
 ```
 
-Verás este mensaje en consola si todo está bien:
+Si todo está correcto, verás:
 
 ```
 ✅ Conexión exitosa a MongoDB
 🚀 Servidor corriendo en el puerto 3000
 ```
 
-### 5️⃣ Abre el frontend en el navegador
+---
 
-Desde tu editor o directamente desde el explorador de archivos, abre:
+### 5️⃣ Levanta el servidor Angular (Frontend)
+
+Desde la raíz del proyecto:
 
 ```bash
-frontend/galeria.html
+cd frontend
+ng serve --port 4300
 ```
 
-O bien haz clic derecho y selecciona "Abrir con Live Server" si usas VS Code.
+Abre en tu navegador:
+
+- [http://localhost:4300](http://localhost:4300)
 
 ---
 
-## 💾 ¿Cómo funciona la conexión entre el backend y el frontend?
+## 💻 ¿Cómo funciona la conexión entre el backend y el frontend?
 
-### 👉 Obtener tortas (GET)
+### 📥 Obtener tortas (GET)
 
-El archivo `frontend/js/get.js` se ejecuta en `galeria.html` y hace una solicitud GET a:
-
-```
-http://localhost:3000/api/tortas
-```
-
-Esto trae todas las tortas desde MongoDB y las muestra automáticamente en la galería.
-
-### 👉 Agregar tortas (POST)
-
-Desde `crear-torta.html`, el archivo `post.js` recoge los datos del formulario y hace una solicitud POST a:
+Desde `galeria.html`, el archivo `get.js` hace una solicitud a:
 
 ```
 http://localhost:3000/api/tortas
 ```
 
-Esto crea una nueva torta y la guarda en la base de datos MongoDB.
+Esto carga todas las tortas desde MongoDB.
 
-### 📦 Esquema de una torta
+### 📤 Agregar tortas (POST)
 
-```js
+Desde `crear-torta.html`, el archivo `post.js` toma los datos del formulario y los envía a:
+
+```
+http://localhost:3000/api/tortas
+```
+
+Esto guarda la torta en la base de datos.
+
+---
+
+## 📦 Esquema de una torta
+
+```json
 {
-  nombre: "Torta de Chocolate",
-  descripcion: "Bizcocho húmedo con relleno cremoso",
-  precio: 15000,
-  imagen: "https://ejemplo.com/imagen.jpg"
+  "nombre": "Torta de Chocolate",
+  "descripcion": "Bizcocho húmedo con relleno cremoso",
+  "precio": 15000,
+  "imagen": "https://ejemplo.com/imagen.jpg"
 }
 ```
 
 ---
 
-## 🧪 ¿Cómo verificar que funciona?
+## ✅ ¿Cómo verificar que funciona?
 
-1. Inicia MongoDB localmente (`mongod`).
-2. Corre el backend (`node app.js`).
-3. Abre `crear-torta.html` y registra una torta.
-4. Abre `galeria.html` para ver la torta que ingresaste.
-
-También puedes verificar en la base de datos con Mongo Shell:
+1. Asegúrate de que **MongoDB esté corriendo** (`mongod`)
+2. Corre el backend: `node app.js`
+3. Inicia el frontend con Angular: `ng serve --port 4300`
+4. Abre el navegador y registra una torta
+5. Verifica la visualización en la galería
+6. También puedes inspeccionar en la base de datos con:
 
 ```bash
 mongo
 use pasteleríaDB
 db.tortas.find().pretty()
 ```
+
+---
+
+📌 *Hecho con 💖 por Loca Idea Pastelería*
