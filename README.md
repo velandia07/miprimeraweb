@@ -18,8 +18,7 @@ Este proyecto consiste en una página web para una pastelería llamada **Loca Id
 ✅ Sistema de registro y login de usuarios con Angular  
 ✅ Autenticación protegida para acceder a la vista `crear-torta`  
 ✅ Almacenamiento de usuarios registrados en la base de datos  
-✅ Visualización de tortas en galería  
-✅ Eliminación de tortas desde la interfaz  
+✅ Visualización de tortas en galería   
 ✅ Cálculo interactivo de precios por porciones con descuentos
 
 ---
